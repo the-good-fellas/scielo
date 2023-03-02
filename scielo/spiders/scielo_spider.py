@@ -16,7 +16,7 @@ class ScieloSpider(scrapy.Spider):
     for i in range(2, parts):
       from_ = (100 * i + 1) - 100
       urls.append(
-        f'https://search.scielo.org/?fb=&q=*&lang=pt&count=50&from={from_}&output=site&sort=&format=summary&page={1}&where=&filter_boolean_operator%5Bsubject_area%5D%5B%5D=OR&filter%5Bla%5D%5B%5D=pt&filter%5Bsubject_area%5D%5B%5D=Health+Sciences&filter%5Bsubject_area%5D%5B%5D=Biological+Sciences',
+        f'https://search.scielo.org/?fb=&q=*&lang=pt&count=50&from={from_}&output=site&sort=&format=summary&page={i}&where=&filter_boolean_operator%5Bsubject_area%5D%5B%5D=OR&filter%5Bla%5D%5B%5D=pt&filter%5Bsubject_area%5D%5B%5D=Health+Sciences&filter%5Bsubject_area%5D%5B%5D=Biological+Sciences',
       )
 
     logger.info(f'urls to scrap: {len(urls)}')
