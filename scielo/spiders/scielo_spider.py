@@ -10,7 +10,7 @@ class ScieloSpider(scrapy.Spider):
   name = "scielo"
 
   def start_requests(self):
-    parts = 3909
+    parts = 3911
     urls = [
       'https://search.scielo.org/?fb=&q=*&lang=pt&count=50&from=1&output=site&sort=&format=summary&page=1&where=&filter_boolean_operator%5Bsubject_area%5D%5B%5D=OR&filter%5Bla%5D%5B%5D=pt&filter%5Bsubject_area%5D%5B%5D=Health+Sciences&filter%5Bsubject_area%5D%5B%5D=Biological+Sciences']
     for i in range(2, parts):
